@@ -1,0 +1,33 @@
+body {
+    background:#000 url(bck.jpg) -70px 0 no-repeat !important;
+}
+
+img {
+    -ms-interpolation-mode:bicubic;
+}
+
+.contact ul {
+    margin:0;
+}
+
+.contact .url {
+    width:auto;
+    height:auto;
+    background:none;
+    display:inline;
+    text-indent:0;
+}
+
+.contact .url:hover {
+    background-color:#95a625;
+    color:#000;
+}
+
+.vcard-link a {
+    display:inline;
+    width:auto;
+    height:auto;
+    background:none;
+    text-indent:0;
+}
+

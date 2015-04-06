@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+article,
+section {
+    display:block;
+}
+
+html {
+    font:normal 100%/1.6 Arial,sans-serif;
+    overflow-y:scroll;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    margin:0 auto;
+    background:#000;
+    color:#fff;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+}
+
+.vcard {
+    margin:140px 0 0 200px;
+}
+
+header h1 {
+    font:800 1.6em 'Open Sans',Arial,sans-serif;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.family-name {
+    color:#95a625;
+}
+
+.about,
+.contact {
+    font-size:0.875em;
+}
+
+.role,
+section h1 {
+    border:0;
+    clip:rect(0 0 0 0);
+    margin:-1px;
+    padding:0;
+    position:absolute;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+.photo {
+    position:absolute;
+    top:148px;
+    left:70px;
+}
+
+a {
+    color:#95a625;
+    text-decoration:none;
+}
+
+a:focus {
+    outline:none;
+}
+
+.email:hover,
+.email:focus {
+    background-color:#95a625;
+    color:#000;
+}
+
+.contact ul {
+    padding-left:0;
+    list-style: none;
+}
+
+.contact li {
+    margin-right:10px;
+    display:inline;
+}
+
+.contact li > a {
+    background-image:url(icons.png);
+    display:inline-block;
+    width:31px;
+    height:32px;
+    text-indent:-9999px;
+    opacity:.4;
+}
+
+.contact li > a:hover,
+.contact li > a:focus {opacity:1;}
+.contact li:nth-child(1) > a{background-position:0 0;}
+.contact li:nth-child(2) > a{background-position:-32px 0;}
+/* .contact li:nth-child(3) > a{background-position:-64px 0;} */
+/* .contact li:nth-child(4) > a{background-position:-96px 0;} */
+.contact li:nth-child(3) > a{background-position:31px 0;}
+
+.vcard-link {
+    position:absolute;
+    top:245px;
+    left:68px;
+}
+
+.vcard-link > a {
+    display:block;
+    width:20px;
+    height:20px;
+    background-image:url(vcard.png);
+    text-indent:-9999px;
+}
+
+::-moz-selection {
+    background-color:#c7de31;
+    color:#323906;
+}
+
+::selection {
+    background-color:#c7de31;
+    color:#323906;
+}
+
+
+
+@media all and (max-width:480px) {
+    .vcard {
+        margin:2px 4px;
+    }
+}
+
+@media all and (max-width:765px) {
+    .vcard {
+        margin:10px 16px;
+    }
+    .photo {
+        display:none;
+    }
+}
+
+@media print {
+    * {background:transparent !important;color:black !important;}
+    a, a:visited {text-decoration:underline;}
+    a[href]:after {content:" (" attr(href) ")";}
+    @page {margin:0.5cm;}
+    p {orphans:3;widows:3;}
+
+    .vcard {
+        margin:1cm !important;
+    }
+
+    .photo {
+        display:none;
+    }
+    .contact li > a {
+        width:auto;
+        height:auto;
+        background:none;
+        display:block;
+        text-indent:0;
+    }
+}
